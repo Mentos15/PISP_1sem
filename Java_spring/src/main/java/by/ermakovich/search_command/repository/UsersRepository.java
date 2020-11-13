@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 public interface UsersRepository extends JpaRepository<Users, Long> {
 
 
-    Users findByUsername(@Param("username")String username);
+    Users findByUsername(/*@Param("username")*/String userName);
 
 //    Users findByUsernameAndPassword(@Param("username")String username, @Param("password")String password);
 

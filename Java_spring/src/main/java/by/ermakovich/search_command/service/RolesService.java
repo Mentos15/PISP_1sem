@@ -12,8 +12,8 @@ public class RolesService{
     private RolesRepository rolesRepository;
 
 
-    public Roles findFirstByName(String name) {
-        return null;
+    public Roles findByName(String name) {
+        return rolesRepository.findByName(name);
     }
 
     public Roles getById(long id) {

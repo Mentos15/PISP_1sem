@@ -8,7 +8,8 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface RolesRepository extends JpaRepository<Roles, Long> {
-    Roles findFirstByName(String name);
 
+
+    Roles findByName(String name);
     Roles getById(long id);
 }

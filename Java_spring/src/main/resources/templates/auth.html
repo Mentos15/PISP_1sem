@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/main.css}">
+    <script  th:src="@{/js/auth.js}"></script>
+</head>
+<body>
+<div class="wrapper">
+    <form method="POST">
+        <p>Авторизация</p>
+        <input type="email" class="userName-input" placeholder="username(email)">
+        <input type="password" class="passwordReg-input" placeholder="password">
+        <input type="button" value="Auth" onclick="auth()">
+    </form>
+</div>
+</body>
+</html>

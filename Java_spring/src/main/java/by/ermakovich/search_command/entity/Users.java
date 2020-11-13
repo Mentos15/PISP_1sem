@@ -1,5 +1,7 @@
 package by.ermakovich.search_command.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
@@ -11,7 +13,9 @@ public class Users {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "id", length = 6, nullable = false)
     private long id;
 
     @Column(name="username", unique = true, nullable = false, length = 20)
@@ -20,16 +24,18 @@ public class Users {
     @Column(name = "password", length = 20, nullable = false)
     private  String password;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
 
 
+    @ManyToOne
+    @JoinColumn(name = "idrole")
+    private Roles roles;
 
-    private Set<Roles> roles = new HashSet<>();
+    public Users() {}
+
+    public Users(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
 
     public long getId(){return id;}
 
@@ -49,11 +55,13 @@ public class Users {
         this.password = password;
     }
 
-    public Set<Roles> getRoles() {
+    public Roles getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Roles> roles) {
+    public void setRoles(Roles roles) {
         this.roles = roles;
     }
+
+
 }

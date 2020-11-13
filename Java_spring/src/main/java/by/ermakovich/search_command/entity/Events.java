@@ -2,6 +2,7 @@ package by.ermakovich.search_command.entity;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="events")
@@ -21,6 +22,11 @@ public class Events {
 
     @OneToMany(mappedBy = "events")
     private List<Application> aplication;
+
+
+    @ManyToMany
+    Set<City> city;
+
 
     public long getId() {
         return id;

@@ -1,4 +1,5 @@
 package by.ermakovich.search_command.config;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 @Configuration
 @EnableJpaRepositories("by.ermakovich.search_command.repository")
 @EntityScan(basePackages = {"by.ermakovich.search_command.entity"})
+@EnableAutoConfiguration
 public class WebConfig implements WebMvcConfigurer {
     @Bean
     public ClassLoaderTemplateResolver templateResolver() {
@@ -41,7 +43,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
-        registry.addViewController("/registration").setViewName("registration");
+
     }
 }
 

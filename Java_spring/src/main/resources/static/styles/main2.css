@@ -1,0 +1,25 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #9370DB;
+  height: 100vh;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+.head{
+  height: 70px;
+  background-color: bisque;
+}
+.container{
+  width: 400px;
+  
+  margin: 50px auto 0 auto;
+  height: auto;
+}
+.application{
+  width: inherit;
+  height: 500px;
+  
+}

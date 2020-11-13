@@ -14,10 +14,10 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-//    @GetMapping
-//    public Users GetUser(){
-//        return usersService.findByUsername("Dima");
-//    }
+    @GetMapping
+    public Users GetUser(){
+        return usersService.findByLogin("www@mail.ru");
+    }
 
 
 
