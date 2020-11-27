@@ -1,6 +1,7 @@
 package by.ermakovich.search_command.entity;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,19 +15,18 @@ public class City {
     @Column(name="city", nullable = false, length = 50)
     private String city;
 
-    public City(long id, String city) {
-        this.id = id;
+    public City(){
+
+    }
+
+    public City(String city) {
         this.city = city;
     }
 
-
-    @ManyToMany
-    @JoinTable(
-            name = "city_events",
-            joinColumns = @JoinColumn(name = "city_id"),
-            inverseJoinColumns = @JoinColumn(name = "event_id"))
-    Set<Events> events;
-
+    public City(long id ,String city) {
+        this.id = id;
+        this.city = city;
+    }
 
 
     public long getId() {
@@ -45,11 +45,5 @@ public class City {
         this.city = city;
     }
 
-    public Set<Events> getEvents() {
-        return events;
-    }
 
-    public void setEvents(Set<Events> events) {
-        this.events = events;
-    }
 }

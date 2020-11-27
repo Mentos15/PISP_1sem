@@ -18,17 +18,22 @@ public class Users {
     @Column(name = "id", length = 6, nullable = false)
     private long id;
 
-    @Column(name="username", unique = true, nullable = false, length = 20)
+    @Column(name="username", unique = true, nullable = false, length = 50)
     private String username;
 
-    @Column(name = "password", length = 20, nullable = false)
+    @Column(name = "password", length = 50, nullable = false)
     private  String password;
-
 
 
     @ManyToOne
     @JoinColumn(name = "idrole")
     private Roles roles;
+
+    @Column(name = "activationcode", length = 500)
+    private String activationCode;
+
+
+
 
     public Users() {}
 
@@ -63,5 +68,11 @@ public class Users {
         this.roles = roles;
     }
 
+    public String getActivationCode() {
+        return activationCode;
+    }
 
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
 }

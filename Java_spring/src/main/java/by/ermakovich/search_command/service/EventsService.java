@@ -15,7 +15,7 @@ public class EventsService {
     private EventsRepository eventsRepository;
 
     public Events addEvent(Events event){
-        return eventsRepository.saveAndFlush(event);
+        return eventsRepository.save(event);
     }
 
     public void deleteEvent(Long id) {

@@ -15,14 +15,13 @@ public class ApplicationService {
     private ApplicationRepository applicationRepository;
 
     public Application addApp(Application application){
-        return applicationRepository.saveAndFlush(application);
+        return applicationRepository.save(application);
     }
 
     public void deleteApp(Long id) {
         applicationRepository.deleteById(id);
     }
     public List<Application> findByIdGreaterThan(long id) {
-
         return applicationRepository.findByIdGreaterThan(0);
     }
 

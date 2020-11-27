@@ -13,7 +13,7 @@ public class Application {
     @Column(name="name", nullable = false, length = 20)
     private String name;
 
-    @Column(name="lastName", nullable = false, length = 20)
+    @Column(name="lastname", nullable = false, length = 20)
     private String lastName;
 
     @Column(name="description", nullable = false, length = 500)

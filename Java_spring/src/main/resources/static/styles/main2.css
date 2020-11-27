@@ -5,21 +5,59 @@ body{
   height: 100vh;
 }
 .wrapper{
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 .head{
-  height: 70px;
+  height: 10%;
   background-color: bisque;
 }
-.container{
-  width: 400px;
-  
+.events{
   margin: 50px auto 0 auto;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .application{
   width: inherit;
   height: 500px;
-  
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+}
+.event{
+  height: 50px;
+  line-height: 50px;
+}
+.event:hover{
+  background-color: red;
+  cursor: pointer;
+}
+.left-column{
+  flex: 1 1 80%;
+}
+.right-column{
+  flex: 1 1 20%;
+  border-left: 2px solid yellow;
+}
+.events .active{
+  background-color: red;
+}
+.column-application{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.hidden{
+  display: none;
+}
+
+.close:hover{
+  cursor: pointer;
+  background-color: red;
 }

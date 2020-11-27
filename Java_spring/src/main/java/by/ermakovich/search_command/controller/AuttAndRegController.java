@@ -19,43 +19,41 @@ public class AuttAndRegController {
     @Autowired
     private JwtProvider jwtProvider;
 
-
-
     @PostMapping("/register")
-    public String registerUser(@RequestBody /*@Valid*/ Users registrationRequest) {
-        Users u = new Users();
-        u.setPassword(registrationRequest.getPassword());
-        u.setUsername(registrationRequest.getUsername());
-        userService.saveUser(u);
-        return "OK";
+    public ResponseEntity<?> registerUser( @RequestBody Users user) {
+//        if(bindingResult.hasErrors()) {
+//            String errorMessage = bindingResult.getFieldError().getField() + ": " + bindingResult.getFieldError().getDefaultMessage();
+//            throw new InvalidFormsException(errorMessage);
+//        }
+        if(!userService.addUser(user))  return new ResponseEntity<String>("BAD", HttpStatus.NOT_FOUND); /*throw new RegisterException("This login already exists");*/
+        else return new ResponseEntity<String>("OK", HttpStatus.OK);
     }
+
+
+//    public String registerUser(@RequestBody /*@Valid*/ Users registrationRequest) {
+//        Users u = new Users();
+//        u.setPassword(registrationRequest.getPassword());
+//        u.setUsername(registrationRequest.getUsername());
+//        userService.saveUser(u);
+//        return "OK";
+//    }
 
     @PostMapping("/auth")
-    public Token auth(@RequestBody Users request) {
-        Users userEntity = userService.findByLoginAndPassword(request.getUsername(), request.getPassword());
-        String token = jwtProvider.generateToken(userEntity.getUsername());
-        return new Token(token);
-    }
-//    @PostMapping(value = "/registration",produces = MediaType.APPLICATION_JSON_VALUE)
-//    public String Register(@RequestBody Users user){
-//        if(!usersService.create(user)){
-//            return "BAD";
-//        }
-//        else{
-//            return "OK";
-//        }
-//    }
+    public ResponseEntity<?> auth(@RequestBody Users request) {
 
-//    @PostMapping(value = "/auth",produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity Auth(@RequestBody Users user){
-//        if(usersService.findByLoginAndPassword(user.getUsername(), user.getPassword()) == null){
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("oshibka");
-//        }
-//        else{
-//            return ResponseEntity.ok("OK");
-//        }
-//
-//    }
+        Users userEntity = userService.findByLoginAndPassword(request.getUsername(), request.getPassword());
+        if(userEntity.getActivationCode() != null) {
+            //throw new AuthException("Please, go to the email indicated during registration and activate your account");
+            String token = jwtProvider.generateToken(userEntity.getUsername());
+            return new ResponseEntity<>(new Token(token), HttpStatus.NOT_FOUND);
+        }
+        else {
+            String token = jwtProvider.generateToken(userEntity.getUsername());
+            return new ResponseEntity<Token>(new Token(token), HttpStatus.OK);
+        }
+
+
+    }
 
 
 

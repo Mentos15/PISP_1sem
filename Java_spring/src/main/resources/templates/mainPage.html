@@ -5,39 +5,47 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" th:href="@{/styles/main2.css}">
 
-    <script  th:src="@{/js/register.js}"></script>
+    <script  th:src="@{/js/main.js}"></script>
 </head>
 <body>
-    <div class="wrappepr">
+    <a href="http://localhost:8080/adminPage">FFF</a>
+    <div class="wrapper">
         <div class="head">
             <div class="logo">
 
             </div>
 
             <div class="logout-button">
-                <input type="button" value="Logout" onclick="sendApp()">
+                <input type="button" value="Logout" onclick="logout()">
             </div>
         </div>
-
-        <div class="container">
-            <div class="content">
-                
-            </div>
-        </div>
-
         <div class="row">
-            <div class="column-event">
+            <div class="left-column full-info-from-event hidden">
 
+                <div class="title"></div>
+                <div class="description"></div>
+                <div class="requirement"></div>
+                <div class="citys"></div>
+                <input class="button-style" type="button" name="add-requirement" onclick="ShowRequirementForm()" value="Откликнуться">
             </div>
 
-            <div class="column-application">
-                <p>Отправить заявку</p>
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Фамилия">
-                <textarea name="description"></textarea>
-                <input type="button" value=" Отправить" onclick="sendApp()">
+            <div class="right-column">
+                <div class="events">
+
+                </div>
             </div>
 
+
+
+        </div>
+
+        <div class="column-application hidden">
+            <p>Отправить заявку</p>
+            <div class="close" onclick="closeEvent()">close</div>
+            <input type="text" placeholder="Имя" class="user-name">
+            <input type="text" placeholder="Фамилия" class="user-lastName">
+            <textarea name="description" class="user-description"></textarea>
+            <input type="button" value=" Отправить" onclick="addApplication()">
         </div>
 
     </div>

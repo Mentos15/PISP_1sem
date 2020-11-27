@@ -1,6 +1,9 @@
 package by.ermakovich.search_command.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -20,12 +23,16 @@ public class Events {
     @Column(name = "requirement", length = 500, nullable = false)
     private String requirement;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "events")
     private List<Application> aplication;
 
-
     @ManyToMany
-    Set<City> city;
+    @JoinTable(
+            name = "city_events",
+            joinColumns = @JoinColumn(name = "event_id"),
+            inverseJoinColumns = @JoinColumn(name = "city_id"))
+    Set<City> citys;
 
 
     public long getId() {
@@ -55,5 +62,23 @@ public class Events {
     public void setRequirement(String requirement) {
         this.requirement = requirement;
     }
+
+
+    public Set<City> getCitys() {
+        return citys;
+    }
+
+    public void setCitys(Set<City> citys) {
+        this.citys = citys;
+    }
+
+    public List<Application> getAplication() {
+        return aplication;
+    }
+
+    public void setAplication(List<Application> aplication) {
+        this.aplication = aplication;
+    }
+
 
 }

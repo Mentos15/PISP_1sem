@@ -19,10 +19,10 @@ async function register() {
     });
     const json = await register.text();
     if(json === "OK") {
-        console.log("ddfgfdsfs")
+
         location.assign('http://localhost:8080/auth');
     }
     else {
-        alert("РЕГИСТРАЦИЯ");
+        alert("неверный логин или пароль");
     }
 }

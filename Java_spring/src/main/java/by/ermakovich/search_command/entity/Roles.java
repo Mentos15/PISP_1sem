@@ -1,5 +1,7 @@
 package by.ermakovich.search_command.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -15,6 +17,7 @@ public class Roles {
     @Column(name="name", nullable = false, length = 20)
     private String name;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "roles")
     private Set<Users> users;
 

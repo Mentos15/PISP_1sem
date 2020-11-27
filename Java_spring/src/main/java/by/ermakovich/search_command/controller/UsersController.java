@@ -1,22 +1,26 @@
 package by.ermakovich.search_command.controller;
 
 import by.ermakovich.search_command.entity.Users;
+import by.ermakovich.search_command.service.EventsService;
 import by.ermakovich.search_command.service.UsersService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class UsersController {
 
-    private final UsersService usersService;
+    @Autowired
+    private UsersService usersService;
 
     public UsersController(UsersService usersService) {
         this.usersService = usersService;
     }
 
-    @GetMapping
-    public Users GetUser(){
-        return usersService.findByLogin("www@mail.ru");
+    @GetMapping(value = "/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Users GetUser(@PathVariable("username") String  username){
+        return usersService.findByLogin(username);
     }
 
 

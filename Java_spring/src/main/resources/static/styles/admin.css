@@ -1,0 +1,117 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightslategray;
+    color: #fff;
+
+}
+textarea, button, select, input{
+    background-color: lightslategray;
+    
+}
+.addEvent-div select{
+    width: 150px;
+    margin-bottom: 30px;
+    width: 309px;
+    border: 3px solid lightcoral;
+    color: #fff;
+    
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+.addEvent-div .addEvent-form{
+    display: flex;
+    flex-direction: column;
+}
+.addEvent-div{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 200px;
+    width: 1000px;
+    justify-content: center;
+}
+.addEvent-div input,.addEvent-div textarea,.addEvent-div button{
+    margin-bottom: 30px;
+    width: 300px;
+    height: 30px;
+    border: 3px solid lightcoral;
+    color: #fff;
+}
+.addEvent-div button{
+    width: 100px;
+    
+    
+}
+.addEvent-div textarea{
+    resize: none;
+    height: 100px;
+    width: 500px;
+}
+
+.addEvent-div p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.panel{
+    margin: auto;
+    width: 1000px;
+    height: 50px;
+    padding: 5px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.panel div{
+    background-color: lightcoral;
+    color: #fff;
+    width: 300px;
+    text-align: center;
+}
+.allApplications{
+    margin-top: 50px;
+}
+
+.application{
+    margin: auto;
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: 3px solid lightcoral;
+    justify-content: space-between;
+}
+.application div{
+    margin-bottom: 10px;
+}
+.application .right{
+    width: 100px;
+}
+
+.cancel, .accept{
+    background-color: red;
+    color: #fff;
+    width: 100px;
+}
+.accept{
+    background-color: green;
+}
+.allApplications{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.close:hover{
+    cursor: pointer;
+    background-color: red;
+}
+
+
