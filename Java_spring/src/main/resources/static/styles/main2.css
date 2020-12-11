@@ -61,3 +61,6 @@ body{
   cursor: pointer;
   background-color: red;
 }
+.Error-Register, .Error-Auth, .Error-Application, .Error-event{
+  color: red;
+}

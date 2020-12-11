@@ -17,21 +17,20 @@
             <button class="showAllEvents" onclick="getAllEvents()">Посмотреть все мероприятия</button>
         </div>
         <div class="addEvent-div hidden">
+            <div class="close" onclick="closeEventForm()">close</div>
+            <p>Название Event:</p>
+            <input type="text" class="eventTitle">
+            <p>Описание:</p>
+            <textarea class="eventDescription"> </textarea>
+            <p>Требования:</p>
+            <textarea class="eventRequirement"> </textarea>
 
-                <div class="close" onclick="closeEventForm()">close</div>
-                <p>Название Event:</p>
-                <input type="text" class="eventTitle">
-                <p>Описание:</p>
-                <textarea class="eventDescription"> </textarea>
-                <p>Требования:</p>
-                <textarea class="eventRequirement"> </textarea>
+            <p>Город:</p>
+            <select size="5" multiple class="citys">
 
-                <p>Город:</p>
-                <select size="5" multiple class="citys">
-
-                </select>
-                <button onclick="AddEvent()"> Добавить </button>
-
+            </select>
+            <button onclick="AddEvent()"> Добавить </button>
+            <div class="Error-event"></div>
         </div>
 
         <div class="allApplications hidden">

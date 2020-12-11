@@ -1,19 +1,28 @@
 window.onload = async () => {
-    const getEvents = await fetch("http://localhost:8080/api/events", {
-        method: 'GET',
-        headers: {
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
-        }
-    });
-    const events = await getEvents.json();
-    generateEvents(events);
 
-    document.getElementsByClassName("events")[0].onclick = function(event) {
-        let div = event.target;
-        if (div.className == 'event-title') generateEventsDescription(div.parentNode);
-        else if (div.className == 'event') generateEventsDescription(div);
-        else return;
-    };
+    if(localStorage.getItem("login") === null){
+
+        location.replace("http://localhost:8080/auth")
+    }
+    else{
+        const getEvents = await fetch("http://localhost:8080/api/events", {
+            method: 'GET',
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
+            }
+        });
+        const events = await getEvents.json();
+        generateEvents(events);
+
+        document.getElementsByClassName("events")[0].onclick = function(event) {
+            let div = event.target;
+            if (div.className == 'event-title') generateEventsDescription(div.parentNode);
+            else if (div.className == 'event') generateEventsDescription(div);
+            else return;
+        };
+    }
+
+
 }
 
 function logout() {
@@ -133,21 +142,20 @@ async function addApplication() {
         },
         body: JSON.stringify(applicationObj),
     });
+
+
+    if(getEvent.ok){
+        getAllEvents();
+        alert("Event добавлен");
+
+    }
+    else {
+        let getErrorEvent = await getEvent.json();
+        alert(getErrorEvent.errorMessage);
+    }
 }
 
 
 function closeEvent(){
     document.getElementsByClassName("column-application")[0].classList.add("hidden");
-}
-
-
-async function AcceptApp(appId){
-    const getEvent = await fetch(`http://localhost:8080/api/admin/applications/${appId}/accept`, {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
-        },
-        body: JSON.stringify(applicationObj),
-    });
 }

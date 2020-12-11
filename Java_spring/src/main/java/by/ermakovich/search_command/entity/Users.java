@@ -3,6 +3,8 @@ package by.ermakovich.search_command.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,10 +20,14 @@ public class Users {
     @Column(name = "id", length = 6, nullable = false)
     private long id;
 
+    @NotBlank
+    @Size(min=5, max=50)
     @Column(name="username", unique = true, nullable = false, length = 50)
     private String username;
 
-    @Column(name = "password", length = 50, nullable = false)
+    @NotBlank
+    @Size(min=3, max=100)
+    @Column(name = "password", length = 100, nullable = false)
     private  String password;
 
 

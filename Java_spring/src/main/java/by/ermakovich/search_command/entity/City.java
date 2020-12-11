@@ -1,6 +1,8 @@
 package by.ermakovich.search_command.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,6 +14,8 @@ public class City {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotBlank
+    @Size(min=5, max=50)
     @Column(name="city", nullable = false, length = 50)
     private String city;
 

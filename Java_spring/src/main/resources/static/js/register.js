@@ -17,12 +17,11 @@ async function register() {
             'Content-Type': 'application/json'
         }
     });
-    const json = await register.text();
-    if(json === "OK") {
-
+    if(register.ok) {
         location.assign('http://localhost:8080/auth');
     }
     else {
-        alert("неверный логин или пароль");
+        let getErrorEvent = await register.json();
+        alert(getErrorEvent.errorMessage);
     }
 }

@@ -3,6 +3,8 @@ package by.ermakovich.search_command.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -14,12 +16,19 @@ public class Events {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "title", length = 40, nullable = false)
+
+    @NotBlank
+    @Size(min=5, max=20)
+    @Column(name = "title", length = 20, nullable = false)
     private String title;
 
+    @NotBlank
+    @Size(min=5, max=500)
     @Column(name = "description", length = 500, nullable = false)
     private String description;
 
+    @NotBlank
+    @Size(min=5, max=500)
     @Column(name = "requirement", length = 500, nullable = false)
     private String requirement;
 

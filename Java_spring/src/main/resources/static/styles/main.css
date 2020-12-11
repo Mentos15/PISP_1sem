@@ -47,6 +47,9 @@ button{
   font-size: 20px;
   background-color: purple;
   color: #fff;
-  
+}
+
+.Error-Register, .Error-Auth, .Error-Application, .Error-event{
+  color: red;
 }
 

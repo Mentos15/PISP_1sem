@@ -28,6 +28,7 @@ async function auth() {
         location.assign('http://localhost:8080/mainPage');
     }
     else {
-        alert("Error");
+        let getErrorEvent = await token.json();
+        alert(getErrorEvent.errorMessage);
     }
 }

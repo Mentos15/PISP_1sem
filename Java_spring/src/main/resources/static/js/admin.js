@@ -74,7 +74,8 @@ async function AddEvent() {
 
         }
         else {
-            alert("проверьте все поля. Что-то пошло не так")
+            let getErrorEvent = await getEvent.json();
+            alert(getErrorEvent.errorMessage);
         }
     }
 

@@ -1,6 +1,8 @@
 package by.ermakovich.search_command.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="application")
@@ -10,12 +12,19 @@ public class Application {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotBlank
+    @Size(min=5, max=20)
     @Column(name="name", nullable = false, length = 20)
     private String name;
 
+    @NotBlank
+    @Size(min=5, max=20)
     @Column(name="lastname", nullable = false, length = 20)
     private String lastName;
 
+
+    @NotBlank
+    @Size(min=5, max=500)
     @Column(name="description", nullable = false, length = 500)
     private String description;
 
