@@ -1,0 +1,13 @@
+﻿  ErrorFunctions.cpp
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(53): error C2065: WSA_INVALID_HANDLE: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(54): error C2065: WSA_INVALID_PARAMETER: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(55): error C2065: WSA_IO_INCOMPLETE: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(56): error C2065: WSA_IO_PENDING: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(57): error C2065: WSA_NOT_ENOUGH_MEMORY: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(58): error C2065: WSA_OPERATION_ABORTED: необъявленный идентификатор
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(53): error C2051: значение выражения для варианта выбора не является константой
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(54): error C2051: значение выражения для варианта выбора не является константой
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(55): error C2051: значение выражения для варианта выбора не является константой
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(56): error C2051: значение выражения для варианта выбора не является константой
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(57): error C2051: значение выражения для варианта выбора не является константой
+e:\загрузки интернета\concurrentserver\concurrentserver\concurrentserver\concurrentserver\errorfunctions.cpp(58): error C2051: значение выражения для варианта выбора не является константой

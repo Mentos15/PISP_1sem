@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  ServerNP.cpp
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\NamedPipe\ServerNP\ServerNP.cpp(44,12): error C2065: LC_ALL: необъявленный идентификатор
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\NamedPipe\ServerNP\ServerNP.cpp(44,2): error C3861: setlocale: идентификатор не найден

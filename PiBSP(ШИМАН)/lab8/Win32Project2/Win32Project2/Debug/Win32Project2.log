@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Win32Project2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  stdafx.cpp
+  dllmain.cpp
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Win32Project2\PrototypeService.h(32,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Win32Project2\PrototypeService.h(39,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Win32Project2\PrototypeService.h(57,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ErrorFunctions.cpp
+  Win32Project2.cpp
+  Создание кода...
+     Создается библиотека D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Debug\Win32Project3.lib и объект D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Debug\Win32Project3.exp
+  Win32Project2.vcxproj -> D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project2\Debug\Win32Project3.dll

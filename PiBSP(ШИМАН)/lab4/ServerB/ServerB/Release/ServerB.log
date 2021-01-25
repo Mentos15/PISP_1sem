@@ -1,0 +1,9 @@
+﻿  ServerB.cpp
+C:\Users\ermak\PiBSP(ШИМАН)\lab4\ServerB\ServerB\ServerB.cpp(91,13): warning C4101: addr: неиспользованная локальная переменная
+C:\Users\ermak\PiBSP(ШИМАН)\lab4\ServerB\ServerB\ServerB.cpp(151,13): warning C4101: addr: неиспользованная локальная переменная
+  Создание кода
+  1 of 131 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ServerB.vcxproj -> C:\Users\ermak\PiBSP(ШИМАН)\lab4\ServerB\Release\ServerB.exe

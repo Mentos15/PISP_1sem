@@ -1,0 +1,5 @@
+﻿  ClientB.cpp
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\ClientB\ClientB\ClientB.cpp(91,25): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\ClientB\ClientB\ClientB.cpp(117,26): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\ClientB\ClientB\ClientB.cpp(102,8): warning C4101: messageFromServer: неиспользованная локальная переменная
+  ClientB.vcxproj -> D:\3cource\PSP\ConcurrentServer\ConcurrentServer\server test\ClientB\Debug\ClientB.exe

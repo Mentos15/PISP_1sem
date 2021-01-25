@@ -1,0 +1,4 @@
+D:\Лабы\безопасность\ServerU\ServerU\Debug\ServerU.exe
+D:\Лабы\безопасность\ServerU\ServerU\Debug\ServerU.pdb
+C:\Users\ermak\PiBSP(ШИМАН)\Lab_3\ServerU\ServerU\Debug\ServerU.exe
+C:\Users\ermak\PiBSP(ШИМАН)\Lab_3\ServerU\ServerU\Debug\ServerU.pdb

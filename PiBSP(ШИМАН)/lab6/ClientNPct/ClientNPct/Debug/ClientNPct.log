@@ -1,0 +1,3 @@
+﻿  ClientNPct.cpp
+C:\Users\ermak\PiBSP(ШИМАН)\lab6\ClientNPct\ClientNPct\ClientNPct.cpp(55,9): warning C4101: cHandle: неиспользованная локальная переменная
+  ClientNPct.vcxproj -> C:\Users\ermak\PiBSP(ШИМАН)\lab6\ClientNPct\Debug\ClientNPct.exe

@@ -1,0 +1,4 @@
+﻿  ClientB.cpp
+D:\3cource\PSP\lab4\ClientB\ClientB\ClientB.cpp(49,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\3cource\PSP\lab4\ClientB\ClientB\ClientB.cpp(52,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ClientB.vcxproj -> D:\3cource\PSP\lab4\ClientB\x64\Debug\ClientB.exe

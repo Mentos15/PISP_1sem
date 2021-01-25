@@ -1,0 +1,4 @@
+D:\Лабы\безопасность\ClientU\Debug\ClientU.exe
+D:\Лабы\безопасность\ClientU\Debug\ClientU.pdb
+C:\Users\ermak\PiBSP(ШИМАН)\Lab_3\ClientU\Debug\ClientU.exe
+C:\Users\ermak\PiBSP(ШИМАН)\Lab_3\ClientU\Debug\ClientU.pdb

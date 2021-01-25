@@ -1,0 +1,9 @@
+﻿  ClientB.cpp
+D:\3cource\PSP\lab4\ClientB\ClientB\ClientB.cpp(200,11): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\3cource\PSP\lab4\ClientB\ClientB\ClientB.cpp(168,28): warning C4101: sendAddr: неиспользованная локальная переменная
+  Создание кода
+  54 of 105 functions (51.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    15 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ClientB.vcxproj -> D:\3cource\PSP\lab4\ClientB\x64\Release\ClientB.exe

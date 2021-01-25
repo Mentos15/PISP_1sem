@@ -1,0 +1,19 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(34,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(41,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(51,13): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(93,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(90,7): warning C4101: lobuf: неиспользованная локальная переменная
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(133,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(131,6): warning C4101: lobuf: неиспользованная локальная переменная
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(131,13): warning C4101: libuf: неиспользованная локальная переменная
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(149,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(152,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(150,6): warning C4101: lobuf: неиспользованная локальная переменная
+D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Win32Project1\PrototypeService.h(150,13): warning C4101: libuf: неиспользованная локальная переменная
+  ErrorFunctions.cpp
+  Win32Project1.cpp
+  Создание кода...
+     Создается библиотека D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Debug\Win32Project1.lib и объект D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Debug\Win32Project1.exp
+  Win32Project1.vcxproj -> D:\3cource\PSP\ConcurrentServer\ConcurrentServer\Win32Project1\Debug\Win32Project1.dll
